@@ -1,0 +1,74 @@
+@import 'nib'
+@import 'normalize.styl'
+@import 'fonts.styl'
+
+/*Colors*/
+blanco = #FAFAFA
+rosa = #EE6E73
+rosa_claro = #FFCDD2
+rosa_mas_claro = #FFEBEE
+gris = #4D4D4D
+gris_claro = #999999
+gris_mas_claro = #F2F2F2
+verde = #6CC644
+facebook = #3B5998
+twitter = #1DA1F2
+
+body
+  background blanco
+  font-family Roboto
+  color gris
+
+title_mobile(color)
+  font-size 1.7em
+  font-weight normal
+  color color
+
+subtitle_mobile(color)
+  font-size 1.4em
+  font-weight normal
+  color color
+
+paragraph_mobile(color)
+  font-size 1em
+  font-weight normal
+  color color
+
+@import './header/style.styl'
+@import './chat/style.styl'
+@import './login/style.styl'
+@import './requestSong/style.styl'
+@import './posts/style.styl'
+@import './post-single/style.styl'
+
+.Front
+  display none
+
+
+.Player
+  margin 1.6em 0
+  background gris_mas_claro
+  height 100px
+  p
+    margin 0
+    padding 0
+    text-align center
+    line-height 100px
+    color gris_claro
+.Footer
+  display: none
+  background gris
+  color blanco
+  padding 1em
+  &-main
+  &-bottom
+    display none
+
+.opaticy
+  display none
+  z-index 10
+  position fixed
+  width: 100%
+  top 0
+  bottom 0
+  background: rgba(gris, 0.5)

@@ -1,0 +1,105 @@
+.Header
+  background rosa
+  color blanco
+  height 60px
+
+  &-btn-login
+    display none
+    subtitle_mobile(blanco)
+    float right
+    text-decoration none
+    line-height 60px
+    padding 0 .5em
+  &-btn-menu
+    color blanco
+    text-decoration none
+    display inline-block
+    font-size 2em
+    padding-left 1.25rem
+    padding-right .6rem
+    line-height 60px
+
+  &-menu
+    position fixed
+    top 0
+    left -100%
+    padding .5em 0
+    background blanco
+    border blanco solid 1px
+    width 85%
+    max-width 300px
+    height 100%
+    box-shadow 0 10px 10px rgba(gris, 0.5)
+    .logo-mobile
+      padding 0 1em
+      display block
+      margin 0 auto
+      width 80%
+      padding-bottom .8em
+      border-bottom 1px gris_claro solid
+      img
+        margin 0 auto
+        display block
+        width 156
+        height 156px
+    .list
+      list-style none
+      margin 0
+      padding 1em 0
+      .link
+        subtitle_mobile(gris)
+        color gris
+        display block
+        overflow hidden
+        padding 1rem
+        text-decoration none
+        text-overflow ellipsis
+        transition .4s all
+        &:hover
+          background gris_mas_claro
+        &.is-active
+          background rosa
+          color blanco
+
+  &-profile
+    padding .6rem 1.25rem .6rem .6rem
+    float right
+    .avatar
+      margin 0
+      img
+        border-radius 50%
+        display block
+        width 40px
+        height 40px
+
+  .menu-dropdown
+    display none
+    width 70%
+    max-width 200px
+    background blanco
+    position absolute
+    top 59px
+    right 1.25em
+    box-shadow 0 1px 20px -1px rgba(gris, 0.5);
+    border-radius .15em
+    &:before
+      content ""
+      border-left 10px transparent solid
+      border-right 10px transparent solid
+      border-bottom 10px blanco solid
+      position absolute
+      top -8px
+      right .6em
+    .list
+      margin 0
+      padding 0
+      list-style none
+      .link
+        subtitle_mobile(gris)
+        display block
+        padding .8rem
+        text-decoration none
+        color gris
+        transition all .4s
+        &:hover
+          background gris_mas_claro

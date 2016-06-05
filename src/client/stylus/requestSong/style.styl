@@ -1,0 +1,60 @@
+.RequestSong
+  display none
+  background blanco
+  position fixed
+  z-index 11
+  box-shadow 0 0 10px 5px rgba(gris, .5)
+  border-radius .1em
+  padding 1em 0
+  width 85%
+  top 25%
+  left 50%
+  margin-left -42.5%
+
+  &-close
+    text-decoration none
+    color gris_claro
+    position: absolute
+    left .5rem
+    font-size 1.7em
+
+  &-text
+    overflow hidden
+    title_mobile(rosa)
+    display block
+    padding 0 2rem
+    text-align center
+    text-overflow ellipsis
+
+  &-form
+    overflow hidden
+    padding .5em 1em
+    .input
+      paragraph_mobile(gris)
+      background none
+      outline none
+      border none
+      border-bottom 2px gris_claro solid
+      width 100%
+      margin-bottom 1.7rem
+      transition border .4s
+      &:focus
+        border-color rosa
+    .message
+      width calc(100% - 4px)
+      resize none
+      height 40px
+    .send
+      border-radius .1rem
+      outline none
+      padding 0 1rem
+      float right
+      font-size 2em
+      color blanco
+      border none
+      background rosa
+      .icon-send
+        display block
+        position relative
+        top -3px
+        transform rotate(-25deg)

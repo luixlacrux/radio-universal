@@ -1,0 +1,58 @@
+.Login
+  display none
+  background blanco
+  position fixed
+  z-index 11
+  box-shadow 0 0 10px 5px rgba(gris, .5)
+  padding 1em 0
+  width 85%
+  top 25%
+  left 50%
+  margin-left -42.5%
+
+  &-close
+    text-decoration none
+    color gris_claro
+    position: absolute
+    left .5rem
+    font-size 1.7em
+
+  &-message
+    overflow hidden
+    title_mobile(rosa)
+    display block
+    padding 0 2rem
+    text-align center
+    text-overflow ellipsis
+
+  &-buttons
+    margin 0 auto
+    width 80%
+    display flex
+    flex-direction column
+
+  &-btn
+    border-radius .1em
+    margin .5em 0
+    text-decoration none
+    padding .8em
+    color blanco
+    overflow hidden
+    white-space nowrap
+    text-overflow ellipsis
+    .icon
+      position relative
+      top .2rem
+      font-size 1.5em
+      margin-right .5rem
+    .text
+      font-size 1.2em
+      &:before
+        content ""
+        margin-right .5em
+        border 1px rgba(gris, 0.5) solid
+
+  .facebook
+    background facebook
+  .twitter
+    background twitter

@@ -1,0 +1,12 @@
+{
+  "name": "radio-universal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "stylus": "stylus -w -c -u nib src/client/stylus/app.styl -o src/client",
+    "server": "http-server src/client"
+  },
+  "author": "",
+  "license": "ISC"
+}
