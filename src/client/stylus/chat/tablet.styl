@@ -1,0 +1,54 @@
+.Chat
+  height 697px
+  img
+    min-width 60px
+    height 60px
+    width 60px
+
+  &-leftMenu
+    height 690px
+    .title
+      title_tablet(rosa)
+    .list
+      .user
+        height 70px
+        &-name
+          line-height 70px
+          paragraph_tablet(gris)
+
+    .profile
+      height 6.60em
+      &-image
+        margin 1.2em 1em
+      &-data
+        padding 1.6em
+        .name
+          paragraph_tablet(blanco)
+        .status
+          top .5rem
+          font-size 1em
+        .icon-arrow_up
+          font-size 3.5em
+
+  &-main
+    height 85%
+    .messages
+      .message
+        &-container
+          .author
+            subtitle_tablet(gris)
+          .text
+            paragraph_tablet(gris)
+          .date
+            font-size 1.2em
+
+  &-send
+    height 6.50em
+    border red 1px solid
+    .btn
+      top 1.5rem
+      font-size 3.25em
+    .message
+      padding 2.5em 4em
+      width calc(100% - 128px)
+      height calc(100% - 5em)

@@ -15,6 +15,7 @@
     text-decoration none
     display inline-block
     font-size 2em
+    float left
     padding-left 1.25rem
     padding-right .6rem
     line-height 60px
@@ -27,20 +28,21 @@
     background blanco
     border blanco solid 1px
     width 85%
-    max-width 300px
-    height 100%
+    height 100vh
     box-shadow 0 10px 10px rgba(gris, 0.5)
+    z-index 11
+    overflow-y: auto
     .logo-mobile
-      padding 0 1em
+      padding 0
       display block
       margin 0 auto
-      width 80%
+      width 85%
       padding-bottom .8em
       border-bottom 1px gris_claro solid
       img
         margin 0 auto
         display block
-        width 156
+        width 156px
         height 156px
     .list
       list-style none
@@ -51,7 +53,7 @@
         color gris
         display block
         overflow hidden
-        padding 1rem
+        padding 1rem 7.5%
         text-decoration none
         text-overflow ellipsis
         transition .4s all

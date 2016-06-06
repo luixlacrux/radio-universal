@@ -15,9 +15,14 @@ facebook = #3B5998
 twitter = #1DA1F2
 
 body
+  position relative
   background blanco
   font-family Roboto
   color gris
+
+// =============================
+// MOBILE MIXINS FONTS SIZE ====
+// =============================
 
 title_mobile(color)
   font-size 1.7em
@@ -34,12 +39,37 @@ paragraph_mobile(color)
   font-weight normal
   color color
 
+// =============================
+// TABLET MIXINS FONTS SIZE ====
+// =============================
+
+title_post_tablet(color)
+  font-size 3em
+  font-weight normal
+  color color
+
+title_tablet(color)
+  font-size 2em
+  font-weight normal
+  color color
+
+subtitle_tablet(color)
+  font-size 1.5em
+  font-weight normal
+  color color
+
+paragraph_tablet(color)
+  font-size 1.3em
+  font-weight normal
+  color color
+
 @import './header/style.styl'
 @import './chat/style.styl'
 @import './login/style.styl'
 @import './requestSong/style.styl'
 @import './posts/style.styl'
 @import './post-single/style.styl'
+
 
 .Front
   display none
@@ -49,6 +79,7 @@ paragraph_mobile(color)
   margin 1.6em 0
   background gris_mas_claro
   height 100px
+  max-width 1000px
   p
     margin 0
     padding 0
@@ -72,3 +103,20 @@ paragraph_mobile(color)
   top 0
   bottom 0
   background: rgba(gris, 0.5)
+
+
+// =========================
+// TABLET 768px ============
+// =========================
+
+@media screen and (min-width:768px)
+  .Player
+    height 210px
+    p
+      line-height 210px
+  @import './header/tablet.styl'
+  @import './chat/tablet.styl'
+  @import './login/tablet.styl'
+  @import './requestSong/tablet.styl'
+  @import './posts/tablet.styl'
+  @import './post-single/tablet.styl'
