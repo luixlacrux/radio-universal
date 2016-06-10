@@ -2,14 +2,65 @@
   background rosa
   color blanco
   height 60px
+  &-login-dropdown
+    display none
+    background rgba(rosa_claro, 0.5)
+    color blanco
+    position absolute
+    top 90px
+    width 100%
+    z-index 1
+    height 70px
+    box-shadow 0 10px 10px rgba(gris, .5)
+    .close
+      font-size 3em
+      text-decoration none
+      display inline-block
+      line-height 70px
+      color blanco
+      float left
+      margin 0 .8rem
+    .title
+      subtitle_tablet(blanco)
+      display inline-block
+      line-height 70px
+    .buttons
+      display inline-block
+      float right
+      margin-right 1.5em
+      padding .5em 0
+      .btn
+        border-radius .1em
+        display inline-block
+        width 250px
+        height 54px
+        text-decoration none
+        subtitle_tablet(blanco)
+        &.twitter
+          background twitter
+        &.facebook
+          background facebook
+        .text
+          font-size 14px
+          line-height 54px
+          &:before
+            content: ""
+            border 1px rgba(gris, 0.3) solid
+            margin-right .3rem
+        .icon
+          position: relative;
+          top 4px
+          margin-left .5rem
+          margin-right .3rem
+          font-size 1.5rem
 
   &-btn-login
-    display none
+    display block
     subtitle_mobile(blanco)
     float right
     text-decoration none
     line-height 60px
-    padding 0 .5em
+    padding 0 1em
   &-btn-menu
     color blanco
     text-decoration none
@@ -64,10 +115,21 @@
           color blanco
 
   &-profile
-    padding .6rem 1.25rem .6rem .6rem
+    padding .6rem 2rem .6rem .6rem
     float right
     .avatar
+      cursor pointer
       margin 0
+      position: relative;
+      &:after
+        content: ""
+        position absolute
+        right: -15px
+        top 45%
+        border-left 6px transparent solid
+        border-right 6px transparent solid
+        border-top 7px blanco solid
+
       img
         border-radius 50%
         display block
@@ -84,6 +146,7 @@
     right 1.25em
     box-shadow 0 1px 20px -1px rgba(gris, 0.5);
     border-radius .15em
+    z-index 11
     &:before
       content ""
       border-left 10px transparent solid
@@ -91,7 +154,7 @@
       border-bottom 10px blanco solid
       position absolute
       top -8px
-      right .6em
+      right 1.4em
     .list
       margin 0
       padding 0

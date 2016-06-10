@@ -10,42 +10,55 @@
 </head>
 <body>
   <header class="Header">
-    <a href="#" class="Header-btn-menu icon-menu"></a>
-    <nav class="Header-menu">
+    <a href="#" class="Header-btn-menu icon-menu" id="btn-menu"></a>
+    <nav class="Header-menu" id="menu">
       <figure class="logo-mobile">
-        <img src="assets/images/logo.png" alt="radio universal 101.3fm">
+        <img src="assets/images/logo.jpg" alt="radio universal 101.3fm">
       </figure>
       <ul class="list">
-        <li class="item"><a href="#" class="link is-active">Inicio</a></li>
-        <li class="item"><a href="#" class="link">Blog</a></li>
-        <li class="item"><a href="#" class="link">Contactanos</a></li>
-        <li class="item"><a href="#" class="link">Acerca de</a></li>
+        <li class="item"><a href="/" class="link is-active">Inicio</a></li>
+        <li class="item"><a href="/blog" class="link">Blog</a></li>
+        <li class="item"><a href="/contacto" class="link">Contactanos</a></li>
+        <li class="item"><a href="/nosotros" class="link">Nosotros</a></li>
       </ul>
     </nav>
     <div class="Header-profile">
-      <figure class="avatar">
+      <figure class="avatar" id="avatar">
         <img src="assets/images/default-user.jpg" alt="username">
       </figure>
-      <div class="menu-dropdown">
+      <div class="menu-dropdown" id="user-menu">
         <ul class="list">
-          <li class="item"><a href="#" class="link">Opcion 1</a></li>
-          <li class="item"><a href="#" class="link">Otra Opcion</a></li>
+          <li class="item"><a href="#" class="link" id="btn-reqSong">Pedir Cancion</a></li>
           <li class="item"><a href="#" class="link">Historial</a></li>
-          <li class="item"><a href="#" class="link">Cerrar Sesión</a></li>
+          <li class="item"><a href="/logout" class="link">Cerrar Sesión</a></li>
         </ul>
       </div>
     </div>
-    <a href="#" class="Header-btn-login">Iniciar Sesión</a>
-  </header>
 
+    <a href="#" class="Header-btn-login" id="btn-login">Iniciar Sesión</a>
+
+    <div class="Header-login-dropdown" id="login-dropdown">
+      <a href="#" class="close icon-close"></a>
+      <span class="title">Inicia sesión para disfrutar de todos los servicios</span>
+      <div class="buttons">
+        <a href="#" class="btn facebook">
+          <span class="icon icon-facebook"></span>
+          <span class="text">Conectate con Facebook</span>
+        </a>
+        <a href="#" class="btn twitter">
+          <span class="icon icon-twitter"></span>
+          <span class="text">Conectate con Twitter</span>
+        </a>
+      </div>
+    </div>
+  </header>
   <section class="Front">
-    <figure class="Front-logo">
-      <img src="assets/images/logo.png" alt="radio universal fm">
-    </figure>
+    <img src="assets/images/portada-radio-universal.jpg" alt="radio universal">
+    <button type="button" class="Front-btn-down icon-arrow_down"></button>
   </section>
 
   <main class="Main">
-    <div class="Login">
+    <div class="Login" id="login">
       <a href="#" class="Login-close icon-close"></a>
       <span class="Login-message">Bienvenidos a Radio Universal</span>
       <div class="Login-buttons">
@@ -69,9 +82,9 @@
           <h2 class="title"><a href="blog-single.html" class="link">Titulo largo</a></h2>
           <p class="description">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-            enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-            ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irured.
           </p>
           <time class="date">12 mar 2019</time>
         </div>
@@ -84,9 +97,9 @@
           <h2 class="title"><a href="blog-single.html" class="link">Titulo largo</a></h2>
           <p class="description">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-            enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-            ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irured.
           </p>
           <time class="date">12 mar 2019</time>
         </div>
@@ -99,9 +112,9 @@
           <h2 class="title"><a href="blog-single.html" class="link">Titulo largo</a></h2>
           <p class="description">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-            enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-            ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irured.
           </p>
           <time class="date">12 mar 2019</time>
         </div>
@@ -126,52 +139,94 @@
         <a href="#" class="logo-little">
           <img src="assets/images/logo.png" alt="radio universal fm">
         </a>
+        <h3 class="title">Contactanos</h3>
         <ul class="list">
           <li class="item">
-            <span class="link icon-phone">0414-452134634</span>
+            <span class="link">
+              <span class="icon-phone"></span>
+              0414-452134634
+            </span>
           </li>
           <li class="item">
-            <span class="link icon-phone">0257-443535234</span>
+            <span class="link">
+              <span class="icon-phone"></span>
+              0257-443535234
+            </span>
+
           </li>
           <li class="item">
-            <a href="mailto:contacto@radiouniversal.com" class="link icon-mail_white">contacto@radiouniversal.com</a>
+            <a href="mailto:contacto@radiouniversal.com" class="link">
+              <span class="icon-email_black"></span>
+              contacto@radiouniversal.com
+            </a>
           </li>
           <li class="item">
-            <span class="link icon-location">Guanare, Estado Portuguesa</span>
+            <span class="link">
+              <span class="icon-location"></span>
+              Guanare, Estado Portuguesa
+            </span>
           </li>
         </ul>
       </div>
       <div class="submenu">
         <h3 class="title">
-          Links te interes!
+          Links de interes !
         </h3>
         <ul class="list">
           <li class="item">
-            <a href="#" class="icon-book link">Blog</a>
+            <a href="/blog" class="link">
+              <span class="icon-book"></span>
+              Blog
+            </a>
           </li>
           <li class="item">
-            <a href="#" class="icon-mail link">Contacto</a>
+            <a href="/contacto" class="link">
+              <span class="icon-email_black"></span>
+              Contacto
+            </a>
           </li>
           <li class="item">
-            <a href="#" class="icon-businesslink">Nosotros</a>
+            <a href="/nosotros" class="link">
+              <span class="icon-business"></span>
+              Nosotros
+            </a>
+          </li>
+          <li class="item">
+            <a href="https://twitter.com" class="link">
+              <span class="icon-twitter"></span>
+              @radiouniversal103
+            </a>
+          </li>
+          <li class="item">
+            <a href="https://facebook.com" class="link">
+              <span class="icon-facebook2"></span>
+              /radiouniversal103
+            </a>
           </li>
         </ul>
       </div>
-      <div class="tweets"></div>
+      <div class="tweets">
+        <div class="tweets-container">
+          <div class="tweets-top">
+            <button type="button" class="icon-twitter"></button>
+            <span class="text">Radio Universal</span>
+            <button type="button" class="icon-share"></button>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="Footer-bottom">
       <div class="copy">Copyright © 2016 - Radio Universal C.A.
-        <br></br>
         RIF: J-40234544-4.
         <br></br>
-        Todos los derechos reservados. Guanare, Venezuela
       </div>
       <div class="authors">
         Sitio web por:
-        <a href="ht">Platzi</a>
+        <a href="#">Platzi</a>
       </div>
     </div>
   </footer>
-  <div class="opaticy"></div>
+  <div class="opacity" id="opacity"></div>
+  <script src="app.js"></script>
 </body>
 </html>

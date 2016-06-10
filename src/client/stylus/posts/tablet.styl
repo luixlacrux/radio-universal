@@ -10,6 +10,11 @@
     .container
       .title
         subtitle_tablet(rosa)
+      .description
+        min-height 150px
+        paragraph_tablet(gris)
+      .date
+        little_tablet(gris_claro)
 
 .Subscribe
   &-title
@@ -17,8 +22,15 @@
   &-form
     margin-bottom 1em
     width 100%
+    .text
+      paragraph_tablet(blanco)
+      font-weight normal
     .input
+      paragraph_tablet(gris)
+      font-weight normal
       width 195px
       display inline-block
       &:nth-child(even)
         margin: .5rem
+    .btn
+      color blanco

@@ -1,5 +1,5 @@
 .Chat
-  height 697px
+  height 690px
   img
     min-width 60px
     height 60px
@@ -14,25 +14,28 @@
         height 70px
         &-name
           line-height 70px
-          paragraph_tablet(gris)
+          subtitle_tablet(gris)
+          font-weight normal
 
     .profile
-      height 6.60em
+      height 90px
       &-image
-        margin 1.2em 1em
+        margin 1em
       &-data
         padding 1.6em
         .name
-          paragraph_tablet(blanco)
+          subtitle_tablet(blanco)
+          font-weight normal
         .status
           top .5rem
-          font-size 1em
+          little_tablet(blanco)
         .icon-arrow_up
-          font-size 3.5em
+          font-size 3em
 
   &-main
-    height 85%
+    height 600px
     .messages
+      height calc(585px - .62em)
       .message
         &-container
           .author
@@ -40,15 +43,16 @@
           .text
             paragraph_tablet(gris)
           .date
-            font-size 1.2em
+            little_tablet(gris_claro)
 
   &-send
-    height 6.50em
+    height 90px
     border red 1px solid
     .btn
       top 1.5rem
-      font-size 3.25em
+      font-size 3em
     .message
-      padding 2.5em 4em
+      paragraph_tablet(gris)
+      padding 2.5rem 4rem
       width calc(100% - 128px)
-      height calc(100% - 5em)
+      height calc(100% - 5rem)

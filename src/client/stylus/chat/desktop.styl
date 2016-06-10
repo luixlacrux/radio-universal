@@ -1,0 +1,48 @@
+.Chat
+  border-radius .1em
+  padding 0
+  box-shadow  0 0 4px 1px rgba(gris_claro, .2)
+  &-leftMenu
+    background rosa_mas_claro
+    display: inline-block;
+    position relative
+    left 0
+    width calc(35% - 1px)
+    float left
+
+    .profile
+      background rosa
+      &-data
+        .status
+          font-size 12px
+
+  &-main
+    background blanco
+    display inline-block
+    width 65%
+
+  &-send
+    width 65%
+    float right
+    .icon-more
+      display none
+    .message
+      width calc(100% - 112px)
+      padding 2em 6rem 0 1rem
+      paragraph_tablet(gris)
+      height calc(100% - 2em)
+
+    .btn
+      outline 0
+      background rosa
+      color blanco
+      border-radius 50%
+      top .35em
+      right .4em
+      height 60px
+      width 60px
+      transform: rotate(-24deg)
+      &:before
+        position relative
+        top -2px
+        left 5px

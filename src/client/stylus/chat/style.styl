@@ -1,7 +1,8 @@
+
 .Chat
+  margin 0 auto
   max-width 1000px
   background gris_mas_claro
-  padding-top .62em
   height 320px
   position relative
   img
@@ -10,17 +11,26 @@
     height 30px
     border-radius 50%
 
+  &-opacity
+    display none
+    position: absolute
+    width 100%
+    top 0
+    bottom 0
+    background rgba(gris, 0.5)
+    z-index 4
+
   &-leftMenu
     background blanco
     height 320px
     width 80%
-    padding-top .62em
     position absolute
     left -100%
     z-index 5
     .title
       display block
       title_mobile(rosa)
+      font-weight 500
       padding .5rem 1rem
       text-align center
     .list
@@ -42,12 +52,13 @@
           overflow hidden
           text-overflow ellipsis
           paragraph_mobile(gris)
+          font-weight normal
           display block
           line-height 40px
     .profile
       z-index 3
       position: absolute;
-      height 3.2em
+      height 48px
       background gris
       color blanco
       bottom 0
@@ -61,20 +72,21 @@
           display block
           position relative
           paragraph_mobile(blanco)
+          font-weight normal
         .status
           position relative
-          font-size .8em
+          font-size 9px
           margin-left 15px
           &:before
             content ""
             position absolute
-            width 5px
-            height 5px
+            width 3px
+            height 3px
             background verde
             border 3px verde solid
             border-radius 50%
-            left: -15px
-            top: 2px
+            left -10px
+            top 3px
         .icon-arrow_up
           font-size 3em
           position absolute
@@ -83,12 +95,11 @@
 
 
   &-main
-    min-height 280px
-    height 80%
+    height 272px
     .messages
-      padding 0 .62em
-      height 100%
+      padding .62em
       overflow-y auto
+      height calc(263px - .62em)
       .message
         border-radius .1em
         box-shadow 0 0 1px 1px rgba(gris_claro, 0.2);
@@ -113,7 +124,7 @@
           .date
             color gris_claro
             float right
-            font-size .8rem
+            font-size 10px
 
   &-send
     height 3em
@@ -138,10 +149,11 @@
       margin 0 auto
       display block
       width calc(100% - 98px)
-      padding 1em 3em
-      height calc(100% - 2em)
+      padding 1rem 3rem
+      height calc(100% - 2rem)
       border none
       transition box-shadow .5s
+      paragraph_mobile(gris)
       &:focus
         box-shadow 0 -3px 1px rgba(rosa, 0.9)
 

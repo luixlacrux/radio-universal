@@ -1,15 +1,15 @@
 .Header
-  height 100px
+  height 90px
   overflow: hidden;
 
   &-btn-login
     display inline-block
     subtitle_tablet(blanco)
-    line-height 100px
+    line-height 90px
 
   &-btn-menu
     font-size 3em
-    line-height 100px
+    line-height 90px
 
   &-menu
     .logo-mobile
@@ -21,8 +21,25 @@
         subtitle_tablet(gris)
 
   &-profile
-    padding 1rem 1.25rem 1rem 1rem
+    display none
+    padding .7rem 2.5rem .7rem .7rem
     .avatar
+      &:after
+        right: -25px
+        border-left-width 10px
+        border-right-width 10px
+        border-top-width 12px
       img
         width 70px
         height 70px
+    .menu-dropdown
+      top 89px
+      &:before
+        border-left-width 15px
+        border-right-width 15px
+        border-bottom-width 15px
+        top -10px
+        right 2.4em
+      .list
+        .link
+          subtitle_tablet(gris)
