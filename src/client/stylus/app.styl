@@ -4,9 +4,12 @@
 
 /*Colors*/
 blanco = #FAFAFA
-rosa = #EE6E73
-rosa_claro = #FFCDD2
-rosa_mas_claro = #FFEBEE
+//rosa = #EE6E73
+//rosa_claro = #FFCDD2
+//rosa_mas_claro = #FFEBEE
+rosa = #0091EA
+rosa_claro = #BFE9F9
+rosa_mas_claro = #DCF2FA
 gris = #4D4D4D
 gris_claro = #999999
 gris_mas_claro = #F2F2F2
@@ -19,7 +22,7 @@ book = #08AAF5
 body
   position relative
   background blanco
-  font-family Roboto
+  font-family roboto
   color gris
 
 // =============================
@@ -78,6 +81,7 @@ little_tablet(color)
 @import './post-single/style.styl'
 @import './slider/style.styl'
 @import './slider/custom.styl'
+@import './footer/style.styl'
 
 
 .Front
@@ -100,15 +104,6 @@ little_tablet(color)
     text-align center
     line-height 100px
     color gris_claro
-.Footer
-  display: none
-  background gris
-  color blanco
-  padding 1em
-  &-main
-  &-bottom
-    display none
-
 .opacity
   display none
   z-index 10
@@ -133,6 +128,7 @@ little_tablet(color)
   @import './requestSong/tablet.styl'
   @import './posts/tablet.styl'
   @import './post-single/tablet.styl'
+  @import './footer/tablet.styl'
 
 // =========================
 // DESkTOP 1024px ==========

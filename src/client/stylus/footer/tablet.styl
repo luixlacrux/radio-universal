@@ -1,0 +1,44 @@
+.Footer
+  &-main
+    display flex
+    flex-direction: inherit
+    .contact
+      flex 1
+      border-bottom none
+      border-right 1px gris_mas_claro solid
+      .logo-little
+        width 136px
+        height 136px
+        display block
+        img
+          height 100%
+          width: 100%
+      .title
+        subtitle_tablet(rosa)
+        font-weight bold
+      .list
+        .link
+          paragraph_tablet(blanco)
+          font-weight normal
+          span
+            bottom -5px
+
+    .submenu
+      flex 1
+      .title
+        subtitle_tablet(rosa)
+        font-weight bold
+      .list
+        .item
+        .link
+          paragraph_tablet(blanco)
+          font-weight normal
+          span
+            bottom -5px
+
+  &-bottom
+    paragraph_tablet(blanco)
+    font-weight normal
+    .authors
+      a
+        color gris_claro
