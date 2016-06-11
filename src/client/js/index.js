@@ -5,6 +5,7 @@ import userMenu from 'src/client/js/userMenu'
 import login from 'src/client/js/login'
 import requestSong from 'src/client/js/requestSong'
 import loginDropdown from 'src/client/js/loginDropdown'
+import bxSlider from 'src/client/js/slider'
 
 $(() => {
   const $buttonMenu = $('#btn-menu')
@@ -15,6 +16,14 @@ $(() => {
   const $opacityChat = $('.Chat-opacity')
   const $avatar = $('#avatar')
   const $body = $('body')
+
+  $('.slider4').bxSlider({
+    slideWidth: 350,
+    minSlides: 2,
+    maxSlides: 4,
+    moveSlides: 1,
+    slideMargin: 5
+  });
 
   // events
   $buttonMenu.click(menu.show)
@@ -29,5 +38,5 @@ $(() => {
     login.hide()
     requestSong.hide()
   })
-  
+
 })

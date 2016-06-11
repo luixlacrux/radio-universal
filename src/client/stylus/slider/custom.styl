@@ -1,0 +1,46 @@
+.Slider
+  position relative
+  &-title
+    width 100%
+    margin 1rem auto
+    padding 1rem 0
+    max-width 1000px
+    text-align center
+    title_tablet(rosa)
+    border-bottom 2px rgba(gris_claro, .8) solid
+  &-container
+    .slide
+      width 350px
+      height 250px
+      overflow hidden
+      margin 0
+      &-image
+        width 100%
+        height 100%
+        -webkit-filter: contrast(60%)
+        -moz-filter: contrast(60%)
+        -ms-filter: contrast(60%)
+        -o-filter: contrast(60%)
+        filter: contrast(60%)
+      &-contact
+        padding .5em
+        position absolute
+        bottom 0
+        left 0
+        right 0
+        background rgba(blanco, .8)
+        color gris
+        display flex
+        flex-direction column
+      &-title
+        max-width 350px
+        text-overflow: ellipsis;
+        margin 0
+        border-radius .1em
+        background rgba(gris, .6)
+        position: absolute
+        top 0
+        //width 60%
+        color blanco
+        padding .5em
+        margin 0
