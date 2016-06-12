@@ -6,6 +6,7 @@ import login from 'src/client/js/login'
 import requestSong from 'src/client/js/requestSong'
 import loginDropdown from 'src/client/js/loginDropdown'
 import bxSlider from 'src/client/js/slider'
+import share from 'src/client/js/share'
 
 $(() => {
   const $buttonMenu = $('#btn-menu')
@@ -18,11 +19,18 @@ $(() => {
   const $body = $('body')
 
   $('.slider4').bxSlider({
+    mode: 'horizontal',
     slideWidth: 350,
-    minSlides: 2,
+    minSlides: 1,
     maxSlides: 4,
     moveSlides: 1,
-    slideMargin: 5
+    slideMargin: 5,
+    auto: true,
+    autoStart: true,
+    tickerHover: true,
+    infiniteLoop: true,
+    speed: 1000,
+    pause: 4000
   });
 
   // events

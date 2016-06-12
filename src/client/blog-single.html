@@ -68,17 +68,17 @@
       </div>
     </div>
 
-    <section class="Post">
-      <article class="Post-cover">
+    <article class="Post">
+      <header class="Post-cover">
         <figure class="image">
           <img src="assets/images/blog_1.jpg" alt="{{ title }}">
         </figure>
-        <h1 class="title">Titulo largo</h1>
-      </article>
+        <h1 class="title" id="title-post">Titulo largo</h1>
+      </header>
       <div class="Post-meta">
         <time class="date">12 mar 2019</time>
       </div>
-      <article class="Post-content">
+      <section class="Post-content">
         <h4>Subtitle</h4>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.
            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -103,9 +103,28 @@
             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
             officia deserunt mollit anim id est laborum
           </p>
-      </article>
-    </section>
+      </section>
+
+    </article>
   </main>
+
+  <div class="share">
+    <span class="text">
+      ¿Te gusto este articulo?
+      <br>
+      <span>Compártelo en redes sociales</span>
+    </span>
+    <div class="buttons" id="btns-share">
+      <a class="btn-share twitter" id="share-twitter" href="#" target="_blank">
+        <span class="icon-twitter"></span>
+        Twittear
+      </a>
+      <a class="btn-share facebook" id="share-facebook" href="#" target="_blank">
+        <span class="icon-facebook"></span>
+        Compartir
+      </a>
+    </div>
+  </div>
 
   <div class="Subscribe">
     <span class="Subscribe-title">Quieres leer mas contenido como este</span>
