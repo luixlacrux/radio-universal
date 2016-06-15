@@ -9921,9 +9921,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
   var $buttonMore = (0, _jquery2.default)('#btn-more');
   var $buttonLogin = (0, _jquery2.default)('#btn-login');
   var $buttonReqSong = (0, _jquery2.default)('#btn-reqSong');
+  var $buttonDown = (0, _jquery2.default)('#btn-down');
   var $opacityBody = (0, _jquery2.default)('#opacity');
   var $opacityChat = (0, _jquery2.default)('.Chat-opacity');
   var $uploadImage = (0, _jquery2.default)('#image');
+  var $portada = (0, _jquery2.default)('#portada');
   var $avatar = (0, _jquery2.default)('#avatar');
   var $body = (0, _jquery2.default)('body');
 
@@ -9956,6 +9958,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
     _menu2.default.hide();
     _login2.default.hide();
     _requestSong2.default.hide();
+  });
+  $buttonDown.click(function (ev) {
+    return $body.animate({ scrollTop: $portada.get(0).scrollHeight + 100 }, 1000);
   });
 });
 
