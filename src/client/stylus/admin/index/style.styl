@@ -1,0 +1,104 @@
+.Main
+  &-text
+    title_mobile(rosa)
+    text-align: center;
+  &-controls
+    padding .5em
+    height 200px
+    margin-bottom 1em
+    background: gris_mas_claro
+    p
+      text-align center
+      line-height 200px
+
+  &-requests
+    padding .5em
+    max-height 350px
+    overflow-y: auto
+    background gris_mas_claro
+    .message
+      background rosa_claro
+      box-shadow 0 0 1px 1px rgba(gris_claro, 0.2)
+      display flex
+      margin-bottom .5em
+      padding .5em
+      &-userImage
+        width 30px
+        height 30px
+        border-radius 50%
+        margin-right .5em
+      &-container
+        display inline-block
+        width 100%
+        .name
+          subtitle_mobile(gris)
+          line-height 30px
+        .text
+          paragraph_mobile(gris)
+        .date
+          color gris_claro
+          float right
+          font-size 10px
+  &-posts
+    padding .5em 0
+    background gris_mas_claro
+    &-item
+      border-bottom 1px gris
+      padding .5em
+      display flex
+      background blanco
+      border-bottom 1px rgba(gris_claro, .4) solid
+      paragraph_mobile(gris)
+      font-weight normal
+      position relative
+      .name
+        margin-top 1.5em
+        margin-right .3em
+        flex 1
+        a
+          font-weight 700
+          color gris
+          text-decoration none
+          &:hover
+            text-decoration underline
+      .date
+        margin-top 1.5em
+        margin-right .3em
+        flex 1
+      .btn-options
+        display none
+        background none
+        color rosa
+        border none
+        font-size 2em
+      .options
+        flex 1
+        list-style none
+        text-align right
+        padding 0
+        &-item
+          display inline-block
+          .link
+            color rosa
+            font-size 2em
+            text-decoration none
+            margin-right .2em
+            transition .4s
+            span
+              &.icon-remove2
+                color #EA4335
+              &.icon-edit
+                color #FBBC05
+              &.icon-website
+                color rosa
+
+  .btn-more
+    border none
+    border-radius .2em
+    background rosa
+    margin 1em auto
+    display block
+    subtitle_mobile(blanco)
+    padding .8em 1em
+    span
+      margin-right .4em

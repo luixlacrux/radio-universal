@@ -8,7 +8,7 @@
     "stylus-dev": "stylus -w -c -u nib src/client/stylus/app.styl -o public",
     "server": "http-server public",
     "public": "mkdir -p public",
-    "public-files": "cp -r src/client/assets public && cp src/client/*.html public && npm run stylus",
+    "public-files": "cp -r src/client/assets public && cp src/client/*.html public && cp src/client/js/ckeditor.js public && npm run stylus ",
     "build": "NODE_PATH=. browserify -t [ babelify --presets [ es2015 ] ] src/client/js/index.js > public/app.js",
     "start": "npm run public && npm run public-files && npm run build && npm run server"
   },
