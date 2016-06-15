@@ -1,0 +1,41 @@
+.Edit
+  padding .5em
+  &-label
+    display block
+    subtitle_mobile(rosa)
+    &.last
+      padding 1em 0
+    &.upload-image
+      width calc(80% + 2em)
+    span
+      subtitle_mobile(rosa)
+      display block
+      margin-bottom 1em
+    img
+      width 100%
+      max-height 60vh
+  &-input
+    outline none
+    paragraph_mobile(gris)
+    font-weight normal
+    border none
+    background none
+    border-bottom 3px rgba(gris_claro, .7) solid
+    width 80%
+    max-height 200px
+    padding 1em
+    resize vertical
+    margin-bottom 1em
+    &:focus
+      border-color rosa
+    &.content
+      width calc(100% - 28px)
+
+  &-btn-submit
+    margin-top 1em
+    float right
+    padding .6em 1em
+    subtitle_mobile(blanco)
+    background rosa
+    border none
+    border-radius .2em

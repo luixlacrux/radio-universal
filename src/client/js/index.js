@@ -7,6 +7,7 @@ import requestSong from 'src/client/js/requestSong'
 import loginDropdown from 'src/client/js/loginDropdown'
 import bxSlider from 'src/client/js/slider'
 import share from 'src/client/js/share'
+import blogImage from 'src/client/js/admin'
 
 $(() => {
   const $buttonMenu = $('#btn-menu')
@@ -15,6 +16,7 @@ $(() => {
   const $buttonReqSong = $('#btn-reqSong')
   const $opacityBody = $('#opacity')
   const $opacityChat = $('.Chat-opacity')
+  const $uploadImage = $('#image')
   const $avatar = $('#avatar')
   const $body = $('body')
 
@@ -29,9 +31,12 @@ $(() => {
     autoStart: true,
     tickerHover: true,
     infiniteLoop: true,
-    speed: 1000,
-    pause: 4000
+    speed: 500,
+    pause: 1500,
+    useCss: true
   });
+
+
 
   // events
   $buttonMenu.click(menu.show)
@@ -41,10 +46,10 @@ $(() => {
   $opacityChat.click(chat.leftHide)
   $avatar.click(userMenu.toggle)
   $body.click(userMenu.hide)
+  $uploadImage.change(blogImage.change)
   $opacityBody.click(ev => {
     menu.hide()
     login.hide()
     requestSong.hide()
   })
-
 })
