@@ -9938,7 +9938,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
     slideMargin: 5,
     auto: true,
     autoStart: true,
-    tickerHover: true,
+    //tickerHover: true,
     infiniteLoop: true,
     speed: 500,
     pause: 1500,
@@ -9960,7 +9960,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
     _requestSong2.default.hide();
   });
   $buttonDown.click(function (ev) {
-    return $body.animate({ scrollTop: $portada.get(0).scrollHeight + 100 }, 1000);
+    return $body.animate({ scrollTop: $portada.get(0).scrollHeight + 80 }, 1000);
   });
 });
 
