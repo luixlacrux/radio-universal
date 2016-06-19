@@ -31,7 +31,7 @@ $(() => {
     slideMargin: 5,
     auto: true,
     autoStart: true,
-    tickerHover: true,
+    //tickerHover: true,
     infiniteLoop: true,
     speed: 500,
     pause: 1500,
@@ -54,5 +54,5 @@ $(() => {
     login.hide()
     requestSong.hide()
   })
-  $buttonDown.click(ev => $body.animate({ scrollTop: $portada.get(0).scrollHeight + 100  }, 1000))
+  $buttonDown.click(ev => $body.animate({ scrollTop: $portada.get(0).scrollHeight + 80  }, 1000))
 })

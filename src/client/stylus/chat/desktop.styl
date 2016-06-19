@@ -24,11 +24,13 @@
   &-send
     width 65%
     float right
+    .message
+      padding-top 1em
     .icon-more
       display none
     .message
       width calc(100% - 112px)
-      padding 2em 6rem 0 1rem
+      padding: 1.5em 6rem .5em 1rem
       paragraph_tablet(gris)
       height calc(100% - 2em)
 
@@ -37,12 +39,13 @@
       background rosa
       color blanco
       border-radius 50%
-      top .35em
+      font-size 2.3em
+      top .25em
       right .4em
-      height 60px
-      width 60px
+      height 50px
+      width 50px
       transform: rotate(-24deg)
       &:before
         position relative
         top -2px
-        left 5px
+        left 4px
