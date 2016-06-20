@@ -128,59 +128,11 @@
       </aside>
 
       <div class="Chat-main">
-        <div class="messages">
+        <div class="messages" id="chat-messages">
           <div class="message">
             <img class="message-userImage" src="assets/images/profile3.jpg" alt="user">
             <div class="message-container">
               <div class="author">Username</div>
-              <div class="text">Lorem ipsum dolor sit amet, consectetur
-                adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud . Duis
-                aute irure dolor in reprehenderit in voluptate velit esse cillum.
-              </div>
-              <time class="date">Hace 6 min</time>
-            </div>
-          </div>
-          <div class="message">
-            <img class="message-userImage" src="assets/images/profile2.jpg" alt="user">
-            <div class="message-container">
-              <div class="author">Username</div>
-              <div class="text">Lorem ipsum dolor sit amet, consectetur
-                adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud . Duis
-                aute irure dolor in reprehenderit in voluptate velit esse cillum.
-              </div>
-              <time class="date">Hace 6 min</time>
-            </div>
-          </div>
-          <div class="message me">
-            <img class="message-userImage" src="assets/images/profile1.jpg" alt="user">
-            <div class="message-container">
-              <div class="author">Me</div>
-              <div class="text">Lorem ipsum dolor sit amet, consectetur
-                adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud . Duis
-                aute irure dolor in reprehenderit in voluptate velit esse cillum.
-              </div>
-              <time class="date">Hace 6 min</time>
-            </div>
-          </div>
-          <div class="message">
-            <img class="message-userImage" src="assets/images/profile3.jpg" alt="user">
-            <div class="message-container">
-              <div class="author">Username</div>
-              <div class="text">Lorem ipsum dolor sit amet, consectetur
-                adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud . Duis
-                aute irure dolor in reprehenderit in voluptate velit esse cillum.
-              </div>
-              <time class="date">Hace 6 min</time>
-            </div>
-          </div>
-          <div class="message me">
-            <img class="message-userImage" src="assets/images/profile1.jpg" alt="user">
-            <div class="message-container">
-              <div class="author">Me</div>
               <div class="text">Lorem ipsum dolor sit amet, consectetur
                 adipisicing elit, sed do eiusmod tempor incididunt ut labore
                 et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud . Duis
@@ -192,9 +144,9 @@
         </div>
       </div>
 
-      <form class="Chat-send" action="/send">
+      <form class="Chat-send" id="chat-send" action="/send">
         <button type="button" class="icon-more btn" id="btn-more"></button>
-        <textarea class="message" type="text" maxlength="140" placeholder="Escribir mensaje"></textarea>
+        <textarea class="message" type="text" maxlength="140" placeholder="Escribir mensaje" required></textarea>
         <button class="icon-send btn" type="submit"></button>
       </form>
     </section>

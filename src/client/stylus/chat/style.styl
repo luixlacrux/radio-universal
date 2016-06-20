@@ -107,6 +107,7 @@
         background rosa_claro
         padding .5em
         margin-bottom .5em
+        position relative
         &.me
           background rosa_mas_claro
         &-userImage
@@ -121,9 +122,12 @@
               content: ":"
           .text
             paragraph_mobile(gris)
+            margin-bottom 10px
           .date
             color gris_claro
-            float right
+            position absolute
+            right 5px
+            bottom 5px
             font-size 10px
 
   &-send
