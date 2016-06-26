@@ -1,0 +1,12 @@
+{{#if avatar}}
+  <img src="{{ avatar }}" alt="@{{ username }}" class="profile-image">
+{{else}}
+  <img src="assets/images/profile1.jpg" alt="user" class="profile-image">
+{{/if}}
+<div class="profile-data">
+  <a href="#" class="name">
+    {{ username }}
+    <i class="icon-arrow_up"></i>
+  </a>
+  <span class="status">{{ status }}</span>
+</div>

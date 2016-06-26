@@ -1,0 +1,16 @@
+{{#if facebook_id}}
+<a href="https://facebook.com/profile.php?id={{ facebook_id }}" target="_blank" class="user">
+{{else if twitter_id}}
+<a href="https://twitter.com/?id={{ twitter_id }}" target="_blank" class="user">
+{{else}}
+<a href="#" target="_blank" class="user">
+{{/if}}
+
+  {{#if avatar}}
+  <img class="user-image" src="{{ avatar }}" alt="@{{ username }}">
+  {{else}}
+  <img class="user-image" src="assets/images/profile3.jpg" alt="user">
+  {{/if}}
+
+  <span class="user-name">{{ username }}</span>
+</a>

@@ -6,9 +6,10 @@
   <title>Radio Universal Fm</title>
   <link rel="stylesheet" href="app.css">
   <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet'>
+  <!-- <script src="//twemoji.maxcdn.com/2/twemoji.min.js"></script> -->
 </head>
 <body>
-  <header class="Header">
+  <header class="Header" id="header">
     <a href="#" class="Header-btn-menu icon-menu" id="btn-menu"></a>
     <nav class="Header-menu" id="menu">
       <figure class="logo-mobile">
@@ -38,7 +39,7 @@
     <a href="#" class="Header-btn-login" id="btn-login">Iniciar Sesión</a>
 
     <div class="Header-login-dropdown" id="login-dropdown">
-      <a href="#" class="close icon-close"></a>
+      <a href="#" class="close icon-close" id="close-drop" ></a>
       <span class="title">Inicia sesión para disfrutar de todos los servicios</span>
       <div class="buttons">
         <a href="#" class="btn facebook">
@@ -53,8 +54,6 @@
     </div>
   </header>
 
-
-
   <section class="Front" id="portada">
     <figure class="Front-logo">
       <img src="assets/images/logo.png" alt="radio universal">
@@ -67,7 +66,7 @@
       <p>¿ Player ?</p>
     </section>
     <div class="RequestSong" id="requestSong">
-      <a href="#" class="RequestSong-close icon-close"></a>
+      <a href="#" class="RequestSong-close icon-close x-close"></a>
       <span class="RequestSong-text">Pide una cancion</span>
       <form class="RequestSong-form">
         <input type="text" class="name input" placeholder="Nombre de la cancion">
@@ -78,7 +77,7 @@
       </form>
     </div>
     <div class="Login" id="login">
-      <a href="#" class="Login-close icon-close"></a>
+      <a href="#" class="Login-close icon-close x-close"></a>
       <span class="Login-message">Bienvenidos a Radio Universal</span>
       <div class="Login-buttons">
         <a href="#" class="Login-btn facebook">
@@ -96,57 +95,23 @@
       <div class="Chat-opacity"></div>
       <aside class="Chat-leftMenu" id="chat-leftMenu">
         <span class="title">Usuarios Activos</span>
-        <ul class="list">
-          <li class="item">
-            <a href="#" class="user">
-              <img class="user-image" src="assets/images/profile3.jpg" alt="user">
-              <span class="user-name">Avril Lavigne</span>
-            </a>
-          </li>
-          <li class="item">
-            <a href="#" class="user">
-              <img class="user-image" src="assets/images/profile1.jpg" alt="user">
-              <span class="user-name">Selena Gomez</span>
-            </a>
-          </li>
-          <li class="item">
-            <a href="#" class="user">
-              <img class="user-image" src="assets/images/profile2.jpg" alt="user">
-              <span class="user-name">Taylor Swift</span>
-            </a>
-          </li>
+        <ul class="list" id="list-users">
+          <!-- Users ACTIVES -->
         </ul>
-        <div class="profile">
-          <img src="assets/images/profile1.jpg" alt="user" class="profile-image">
-          <div class="profile-data">
-            <a href="#" class="name">Demi Lovato
-              <i class="icon-arrow_up"></i>
-            </a>
-            <span class="status">En linea</span>
-          </div>
+        <div class="profile" id="chat-user">
+          <!-- User DATA -->
         </div>
       </aside>
 
       <div class="Chat-main">
         <div class="messages" id="chat-messages">
-          <div class="message">
-            <img class="message-userImage" src="assets/images/profile3.jpg" alt="user">
-            <div class="message-container">
-              <div class="author">Username</div>
-              <div class="text">Lorem ipsum dolor sit amet, consectetur
-                adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud . Duis
-                aute irure dolor in reprehenderit in voluptate velit esse cillum.
-              </div>
-              <time class="date">Hace 6 min</time>
-            </div>
-          </div>
+
         </div>
       </div>
 
       <form class="Chat-send" id="chat-send" action="/send">
         <button type="button" class="icon-more btn" id="btn-more"></button>
-        <textarea class="message" type="text" maxlength="140" placeholder="Escribir mensaje" required></textarea>
+        <textarea class="message" type="text" maxlength="140" placeholder="Escribir mensaje"required></textarea>
         <button class="icon-send btn" type="submit"></button>
       </form>
     </section>
