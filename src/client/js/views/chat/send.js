@@ -27,19 +27,9 @@ class Send extends Backbone.View {
     let text = this.$inputText.val()
     if (exp.test(text)) {
       this.$inputText.val('')
-      App.events.trigger('message:send', this.textFormt(text))
+      App.events.trigger('message:send', text)
       this.$inputText.focus()
     }
-  }
-
-  textFormt (text) {
-    let exp ={
-     http: /(\b(https?|ftps?|git):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig,
-     blank: /\r?\n/g
-   }
-
-    return text.replace(exp.http, "<a href='$1' target='_blank'>$1</a>")
-                .replace(exp.blank, '<br>')
   }
 }
 

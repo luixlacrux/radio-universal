@@ -22,6 +22,8 @@ import ChatProfileView from 'src/client/js/views/chat/profile'
 import ChatMessagesView from 'src/client/js/views/chat/messages'
 import ChatUsersView from 'src/client/js/views/chat/users'
 
+import { textFormat } from 'src/client/js/utils'
+
 class Router extends Backbone.Router {
   get routes () {
     return {
@@ -30,7 +32,9 @@ class Router extends Backbone.Router {
   }
 
   initialize () {
-    this.initEvents()
+    this.initEvents() // initializing  globals events
+    // uncomment the following line to enable socket.io
+    // this.initSocket() // initializing  socket events
     this.messages = new Messages()
     this.users = new Users()
     // Views
@@ -52,17 +56,66 @@ class Router extends Backbone.Router {
     this.events = {}
     _.extend(this.events, Backbone.Events)
 
-    this.events.on('message:send', (text) => this.preSend(text))
-    //this.events.on('menu:hide', () => this.header.hideMenu())
+    this.events.on('message:send', text => this.sendMessage(text))
+    this.events.on('message:received', message => this.receivedMessage(message))
+    this.events.on('messages', messages => this.lastMessages(messages))
+    this.events.on('user:add', user => this.addUser(user))
+    this.events.on('user:remove', user => this.removeUser(user))
+    this.events.on('users', users => this.listUsers(users))
   }
 
-  preSend (text) {
-    this.messages.add(new Message({
+  initSocket () {
+    // set up socket io
+    this.socket = io.connect('localhost:3000')
+
+    this.socket.on('message', message => this.events.trigger('message:received', message))
+    this.socket.on('messages', messages => this.events.trigger('messages', messages))
+    this.socket.on('user:add', user => this.events.trigger('user:add', user))
+    this.socket.on('user:remove', user => this.events.trigger('user:remove', user))
+    this.socket.on('users', users => this.events.trigger('users', users))
+  }
+
+  sendMessage (text) {
+    let message = {
       text: text,
       username: this.chatProfileView.model.get('username'),
       avatar: this.chatProfileView.model.get('avatar'),
-      date: moment().format()
-    }))
+      user_id: this.chatProfileView.model.get('id')
+    }
+
+    // emit message to socketio
+    //this.socket.emit('message', message)
+    // add message to collection
+    message.text = textFormat(message.text)
+    message.date = moment().format()
+    message.me = true
+    this.messages.add(new Message(message))
+  }
+
+  receivedMessage (message) {
+    message.text = textFormat(message.text)
+    message.date = moment().format()
+    this.messages.add(new Message(message))
+  }
+
+  lastMessages (messages) {
+    this.messages.reset()
+    console.log('Received last messages')
+    messages.forEach(this.receivedMessage, this)
+  }
+
+  addUser (user) {
+    this.users.add(new User(user))
+  }
+
+  listUsers (users) {
+    this.users.reset()
+    users.forEach(this.addUser, this)
+  }
+
+  removeUser (user) {
+    let item = this.user.findWhere({ id: user.id })
+    this.user.remove(item)
   }
 
   start () {

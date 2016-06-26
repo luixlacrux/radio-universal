@@ -12,6 +12,7 @@ class Message extends Backbone.View {
     let message = this.model.toJSON()
     let html = template(message)
     this.$el.html(html)
+    this.addClassMe(message)
     this.initTime = this.model.get('date')
     this.updateTime()
     return this
@@ -21,6 +22,11 @@ class Message extends Backbone.View {
     let relativeTime = moment(this.initTime).fromNow()
     this.$el.find('.date').html(relativeTime)
     setTimeout(() => this.updateTime(), 60000)
+  }
+
+  addClassMe (message) {
+    if (message.me)
+      this.$el.addClass('me')
   }
 }
 
