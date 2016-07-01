@@ -7,9 +7,10 @@
     "stylus": "stylus -c -u nib src/client/stylus/app.styl -o public",
     "stylus-dev": "stylus -w -c -u nib src/client/stylus/app.styl -o public",
     "server": "http-server public",
-    "public": "mkdir -p public",
-    "public-files": "cp -r src/client/assets public && cp src/client/*.html public && cp src/client/js/ckeditor.js public && cp src/client/*.json public && npm run stylus",
-    "build": "NODE_PATH=. browserify -t hbsfy -t [ babelify --presets [ es2015 ] ] src/client/js/index.js > public/app.js",
+    "public": "mkdir -p public/app public/admin views/app views/admin",
+    "public-files": "cp -r src/client/assets public && cp src/client/apps/admin/js/ckeditor.js public/admin && cp src/client/apps/app/*.json public && npm run stylus && npm run views",
+    "views": "cp -r src/client/apps/app/*html views/app && cp -r src/client/apps/admin/*.html views/admin",
+    "build": "NODE_PATH=. browserify -t hbsfy -t [ babelify --presets [ es2015 ] ] src/client/apps/app/js/index.js > public/app/app.js",
     "start": "npm run public && npm run public-files && npm run build && npm run server"
   },
   "author": "",
