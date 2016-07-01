@@ -2,17 +2,16 @@ import Backbone from 'backbone'
 import moment from 'moment'
 import es from 'moment/locale/es'
 import $ from 'jquery'
-import template from 'src/client/apps/app/handlebars/chat/message.hbs'
+import template from 'src/client/apps/admin/handlebars/request.hbs'
 
-class Message extends Backbone.View {
+class Request extends Backbone.View {
   get tagName () { return 'div' }
   get className () { return 'message' }
 
   render () {
-    let message = this.model.toJSON()
-    let html = template(message)
+    let request = this.model.toJSON()
+    let html = template(request)
     this.$el.html(html)
-    this.addClassMe(message)
     this.initTime = this.model.get('date')
     this.updateTime()
     return this
@@ -23,11 +22,6 @@ class Message extends Backbone.View {
     this.$el.find('.date').html(relativeTime)
     setTimeout(() => this.updateTime(), 60000)
   }
-
-  addClassMe (message) {
-    if (message.me)
-      this.$el.addClass('me')
-  }
 }
 
-export default Message
+export default Request

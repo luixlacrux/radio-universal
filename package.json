@@ -6,16 +6,21 @@
   "scripts": {
     "stylus": "stylus -c -u nib src/client/stylus/app.styl -o public",
     "stylus-dev": "stylus -w -c -u nib src/client/stylus/app.styl -o public",
-    "server": "http-server public",
     "public": "mkdir -p public/app public/admin views/app views/admin",
     "public-files": "cp -r src/client/assets public && cp src/client/apps/admin/js/ckeditor.js public/admin && cp src/client/apps/app/*.json public && npm run stylus && npm run views",
-    "views": "cp -r src/client/apps/app/*html views/app && cp -r src/client/apps/admin/*.html views/admin",
-    "build": "NODE_PATH=. browserify -t hbsfy -t [ babelify --presets [ es2015 ] ] src/client/apps/app/js/index.js > public/app/app.js",
-    "start": "npm run public && npm run public-files && npm run build && npm run server"
+    "views": "cp -r src/client/apps/app/templates/* views/app && cp -r src/client/apps/admin/templates/* views/admin",
+    "build-app": "NODE_PATH=. browserify -t hbsfy -t [ babelify --presets [ es2015 ] ] src/client/apps/app/js/index.js > public/app/app.js",
+    "build-admin": "NODE_PATH=. browserify -t hbsfy -t [ babelify --presets [ es2015 ] ] src/client/apps/admin/js/index.js > public/admin/app.js",
+    "build": "npm run build-app && npm run build-admin",
+    "dist": "babel src/server/index.js src/server/**/*.js --out-dir dist --presets es2015",
+    "server": "NODE_PATH=./dist node dist/src/server",
+    "start": "npm run public && npm run public-files && npm run build && npm run dist && npm run server"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-cli": "^6.10.1",
     "babel-preset-es2015": "^6.9.0",
     "babelify": "^7.3.0",
     "browserify": "^13.0.1",
@@ -23,11 +28,12 @@
     "hbsfy": "^2.7.0"
   },
   "dependencies": {
+    "ejs": "^2.4.2",
+    "express": "^4.14.0",
     "backbone": "^1.3.3",
     "handlebars": "^4.0.5",
     "jquery": "^2.2.4",
     "moment": "^2.13.0",
-    "twemoji-awesome": "^1.0.4",
     "underscore": "^1.8.3"
   }
 }

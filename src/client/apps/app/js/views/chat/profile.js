@@ -1,6 +1,6 @@
 import Backbone from 'backbone'
 import $ from 'jquery'
-import template from 'src/client/apps/app/templates/chat/profile.hbs'
+import template from 'src/client/apps/app/handlebars/chat/profile.hbs'
 
 class ChatProfileView extends Backbone.View {
   get el () { return $('#chat-user') }

@@ -1,0 +1,11 @@
+{{#if avatar}}
+<img class="message-userImage" src="{{ avatar }}" alt="@{{ username }}">
+{{else}}
+<img class="message-userImage" src="/assets/images/profile1.jpg" alt="user">
+{{/if}}
+
+<div class="message-container">
+  <div class="name"> {{ song }} </div>
+  <div class="text"> {{ text }} </div>
+  <time class="date"> {{ date }} </time>
+</div>

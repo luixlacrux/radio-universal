@@ -1,6 +1,6 @@
 import Backbone from 'backbone'
 import $ from 'jquery'
-import template from 'src/client/apps/app/templates/chat/user.hbs'
+import template from 'src/client/apps/app/handlebars/chat/user.hbs'
 
 class User extends Backbone.View {
   get tagName () { return 'li' }

@@ -1,4 +1,7 @@
 *.log
 node_modules
 public
+/views
+dist
 src/client/oldjs
+/*.sublime-*

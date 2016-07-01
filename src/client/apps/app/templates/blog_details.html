@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<% include components/head %>
+
+<body>
+  
+  <% include components/header %>
+
+  <main class="Main blog">
+    
+    <% include components/login %>
+
+    <article class="Post">
+      <header class="Post-cover">
+        <figure class="image">
+          <img src="/assets/images/avril-lavigne-2.jpg" alt="{{ title }}">
+        </figure>
+        <h1 class="title" id="title-post">Titulo largo</h1>
+      </header>
+      <div class="Post-meta">
+        <time class="date">12 mar 2019</time>
+      </div>
+      <section class="Post-content">
+        <h4>Subtitle</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.
+           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+           ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+           aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+           in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+           Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+           officia deserunt mollit anim id est laborum
+         </p>
+         <p>
+           <img src="/assets/images/avril-lavigne.jpg" alt="Avril Lavigne">
+         </p>
+         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+            in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+            officia deserunt mollit anim id est laborumDuis aute irure dolor in reprehenderit
+            in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+            officia deserunt mollit anim id est laborum
+          </p>
+      </section>
+
+    </article>
+  </main>
+
+  <div class="share">
+    <span class="text">
+      ¿Te gusto este articulo?
+      <br>
+      <span>Compártelo en redes sociales</span>
+    </span>
+    <div class="buttons" id="btns-share">
+      <a class="btn-share twitter" id="share-twitter" href="#" target="_blank">
+        <span class="icon-twitter"></span>
+        Twittear
+      </a>
+      <a class="btn-share facebook" id="share-facebook" href="#" target="_blank">
+        <span class="icon-facebook"></span>
+        Compartir
+      </a>
+    </div>
+  </div>
+
+  <div class="Subscribe">
+    <span class="Subscribe-title">Quieres leer mas contenido como este</span>
+    <form class="Subscribe-form">
+      <span class="text">Susbribete</span>
+      <input type="text" name="name" class="name input" placeholder="Nombre">
+      <input type="email" name="email" class="email input" placeholder="Correo electronico">
+      <button type="submit" class="btn input">Suscribirme</button>
+    </form>
+  </div>
+
+  <% include components/footer  %>
+
+  <div class="opacity" id="opacity"></div>
+  <script src="/app/app.js"></script>
+</body>
+</html>

@@ -36,7 +36,7 @@ class Router extends Backbone.Router {
   initialize () {
     this.initEvents() // initializing  globals events
     // uncomment the following line to enable socket.io
-    // this.initSocket() // initializing  socket events
+    //this.initSocket() // initializing  socket events
     this.messages = new Messages()
     this.users = new Users()
     // Views
